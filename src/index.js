@@ -105,4 +105,4 @@ server.get("/search", (req, res) => {
 
 
 //Ligar o servidor
-server.listen(process.env.PORT || 3000)
+server.listen(process.env.PORT || 3001)

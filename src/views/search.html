@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    <title>MyDog - O melhor amigo de todos</title>
+{% endblock title %}
+    
+{% block styles %}
+   <link rel="stylesheet" href="styles/search.css">
+{% endblock styles %}
+
+{% block content %}
+ <div class="content">
+       {% include "partials/page-header.html" %}
+
+        <main>
+       {% if total > 0 %}
+            <h4><strong>{{total}} Dogs </strong> encontrados</h4>
+
+            <div class="cards">
+                {% for place in places %}
+
+                <div class="card">
+                    <div class="image">
+                        <img src="{{place.image}}" alt="">
+                    </div>
+                        <div class="text">
+                        <h2>{{place.subject}}</h2>
+
+                        <h5>{{place.city}} , {{place.uf}}</h5>
+                        <h5>{{place.neighborhood}}</h5>
+                        <h5>{{place.address}}, {{place.number}}</h5>
+                    </div>
+                </div>
+                  {% endfor %}
+
+            </div>
+             {% else %}
+         <h4><strong>Nenhum</strong> local encontrados</h4>
+
+    {% endif %}
+
+        </main>
+
+    </div>
+{% endblock content %}

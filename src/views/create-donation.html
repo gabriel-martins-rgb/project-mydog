@@ -1,0 +1,108 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    <title>Cadatrar Doação</title>
+{% endblock title %}
+
+{% block styles %}
+    <link rel="stylesheet" href="styles/create-donation.css">
+{% endblock styles %}
+
+{% block content %}
+
+    <div class="content">
+        {% include "partials/page-header.html" %}
+
+        <main>
+            <form action="/savedonation" method="POST" id="form">
+                <h1>Cadastre sua doação</h1>
+                <fieldset>
+                    <legend>Dados</legend>
+                    <div class="field-group">
+                        <div class="field">
+                            <label for="name">Nome</label>
+                            <input type="text" name="name" required="required">
+                        </div>
+                        <div class="field">
+                            <label for="email">Email</label>
+                            <input type="text" name="email" required="required" placeholder="ex:amiguinho@dog.com">
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label for="cep">Cep</label>
+                        <input type="text" name="cep" maxlength="8" minlength="8" required="required" placeholder="ex:00000000">
+                    </div>
+
+                    <div class="field-group">
+                        <div class="field">
+                            <label for="address">Endereço</label>
+                            <input type="text" name="address" disabled="disabled">
+                        </div>
+
+                        <div class="field">
+                            <label for="number">Número</label>
+                            <input type="text" name="number" required="required">
+                        </div>
+                    </div>
+
+                    <div class="field-group">
+                        <div class="field">
+                            <label for="city">Cidade</label>
+                            <input type="text" name="city" disabled="disabled">
+                        </div>
+                        <div class="field">
+                            <label for="uf">Estado</label>
+                            <input type="text" name="uf" disabled="disabled">
+                        </div>
+                    </div>
+
+                    <div class="field-group">
+                        <div class="field">
+                            <label for="neighborhood">Bairro</label>
+                            <input type="text" name="neighborhood" disabled="disabled">
+                        </div>
+                        <div class="field">
+                            <label for="phone">Celular/Whatsapp</label>
+                            <input type="tel" name="phone" maxlength="12" minlength="12" required="required" placeholder="ex:(31)9 9999-9999">
+                        </div>
+                    </div>
+
+                </fieldset>
+
+                <fieldset class="fieldset">
+                    <legend>Dados do Dog</legend>
+                    <div class="field">
+                        <label for="subject">Titulo da doação</label>
+                        <input type="text" name="subject" required="required" placeholder="ex: cão docil">
+                    </div>
+                    <div class="field">
+                        <label for="image">Imagem/Foto do Dog</label>
+                        <input type="url" name="image" required="required" placeholder="http://">
+                    </div>
+                    <div class="field">
+                        <label for="image2">Imagem 2/Foto do Dog 2</label>
+                        <input type="url" name="image2" required="required" placeholder="http://">
+                    </div>
+                    <label for="description">Descrição do Dog</label>
+                    <textarea name="description" id="description" minlength="0" maxlength="300" cols="30" rows="10"></textarea>
+                    <p id="maxNumber"></p>
+
+                </fieldset>
+                <button type="submit">Cadastrar doação</button>
+            </form>
+
+        </main>
+
+    </div>
+   
+{% endblock content %}
+
+{% block modal %}
+    {% if saved %}
+    {% include "partials/created.html" %}
+    {% endif %}
+{% endblock modal %}
+{% block scripts %}
+    <script src="scripts/cep-location.js"></script>
+{% endblock scripts %}

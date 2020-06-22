@@ -1,0 +1,89 @@
+:root{
+    --bg-color: linear-gradient(135deg, #0061f2 0%, rgba(105, 0, 199, 1) 110%);
+    --white: #fff;
+    
+    --green: #00ac69;
+    --teal: #00ba94;
+    --cyan: #00cfd5;
+    --primary: #0061f2;
+    --secondary: #6900c7;
+    --text:#1d0535;
+
+    --success: rgb(0, 172, 105,0.99);
+    --info: #00cfd5;
+    --warning: #f4a100;
+    --danger: #e81500;
+    --light: #eff3f9;
+}
+
+* {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+}
+html,body{
+    background-position: center;
+    background-size: auto auto;
+    background-attachment: fixed;
+    background-image: var(--bg-color);
+    font-family: 'Nunito', sans-serif;
+}
+
+button, a{
+     cursor: pointer;
+}
+
+.content{
+    width: 100%;
+    max-width: 1280px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.content header{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+.content header .logo{
+    font-size: 27px;
+    color: black;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.content header .logo #img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(/assets/dog.svg) no-repeat center center/30px;
+    width: 30px;
+    height:30px;
+}
+
+.content header .cadastrar a{
+    margin-top: 10px;
+    font-size: 23px;
+    color: var(--text);
+    font-weight: 600;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+.content header .cadastrar a #login{
+    display: flex;
+    margin-right: 13px;
+    background: url(/assets/log-in.svg) no-repeat;
+    width: 25px;
+    height: 25px;
+}
+

@@ -1,0 +1,42 @@
+
+.content main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 70vh;
+    margin-top: 80px;
+}
+.content main h1{
+    color: var(--text);
+    font-size: 60px;
+}
+.content main h5{
+    color: var(--text);
+    font-size: 25px;
+    font-weight: 400;
+}
+.content main a{ margin-top: 50px; display: flex;align-items: center; transition: filter 0.2s;}
+.content main a #search{
+    display: flex;
+    position: absolute;
+    margin: 19px 10px;
+    
+    padding: 20px 0 40px;
+    background: url(/assets/search.svg) no-repeat;
+    width: 25px;
+    height: 25px;
+   
+ }
+ .content main a:hover{
+    filter: brightness(90%);
+    color: wheat;
+ }
+.content main a strong{
+    color: var(--white);
+    font-size: 24px;
+    background-color: var(--cyan);
+    font-weight: 800;
+    padding: 25px 15px 25px 40px;
+    border-radius: 9px;
+}

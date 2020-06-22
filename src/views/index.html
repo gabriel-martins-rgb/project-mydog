@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+
+{% block styles %}
+    <link rel="stylesheet" href="styles/modal.css">
+    <link rel="stylesheet" href="styles/home.css">
+{% endblock styles %}
+
+{% block content %}
+    <div class="content">
+        <header>
+            <div class="logo">
+                <span id="img"></span>
+                <h3>MyDog</h3>
+            </div>
+            <div class="cadastrar">
+                <a href="/create-donation">
+                    <span id="login"></span>
+                    Cadastre sua doação
+                </a>
+            </div>
+        </header>
+
+        <main>
+            <h1>Precisa de um amiguinho?</h1>
+            <h5>Procure pelo seu Dog amigo ou doe!</h5>
+
+            <a href="#" id="btn">
+                <span id="search"></span>
+                <strong>
+                    Pesquisar por doações
+                </strong>
+            </a>
+        </main>
+    </div>
+{% endblock content %}
+
+{% block modal %}
+    {% include "partials/modal.html" %}
+{% endblock modal %}
+
+{% block scripts %}
+    <script src="/scripts/modal.js"></script>
+{% endblock scripts %}

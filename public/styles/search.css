@@ -1,0 +1,57 @@
+
+.content header .cadastrar a #login{
+    display: flex;
+    margin-right: 9px;
+    background: url(/assets/arrow-left.svg) no-repeat;
+    width: 25px;
+    height: 25px;
+}
+main{
+    display: flex;
+    flex-direction: column;
+}
+
+main .cards{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: 50px 0;
+    background-color: var(--light);
+    border-radius: 8px;
+    padding: 30px;
+
+}
+main .cards .card{
+    margin: 30px 50px;
+    width: auto;
+
+}
+.text{
+   margin-left: 0px;
+}
+h5{
+    font-size: 18px;
+    font-weight: 300;
+}
+h2{
+    font-size: 30px;
+    font-weight: 300;
+}
+h4{
+    font-weight: 300;
+    color: white;
+    margin-right: 10px;
+    margin-top: 48px;
+    font-size: 18px;
+}
+img{
+    width: 100%;
+    max-width: 280px;
+    height: 180px;
+
+    object-fit: cover;
+
+    border-radius: 8px 8px 0 0;
+}

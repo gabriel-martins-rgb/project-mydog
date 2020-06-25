@@ -22,6 +22,7 @@
                         <div class="field">
                             <label for="name">Nome</label>
                             <input type="text" name="name" required="required">
+                             <input type="hidden" name="cadCode" value="">
                         </div>
                         <div class="field">
                             <label for="email">Email</label>
@@ -64,9 +65,10 @@
                         </div>
                         <div class="field">
                             <label for="phone">Celular/Whatsapp</label>
-                            <input type="tel" name="phone" maxlength="12" minlength="12" required="required" placeholder="ex:(31)9 9999-9999">
+                            <input type="tel" name="phone" maxlength="12" minlength="12" required="required" placeholder="ex:(031)9 9999-9999">
                         </div>
                     </div>
+                   
 
                 </fieldset>
 
@@ -91,18 +93,19 @@
                 </fieldset>
                 <button type="submit">Cadastrar doação</button>
             </form>
-
+            
+ 
         </main>
-
     </div>
    
 {% endblock content %}
 
 {% block modal %}
     {% if saved %}
-    {% include "partials/created.html" %}
+     {% include "partials/created.html" %}
     {% endif %}
 {% endblock modal %}
+
 {% block scripts %}
     <script src="scripts/cep-location.js"></script>
 {% endblock scripts %}

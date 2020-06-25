@@ -1,5 +1,5 @@
 :root{
-    --bg-color: linear-gradient(135deg, #0061f2 0%, rgba(105, 0, 199, 1) 110%);
+    --bg-color: linear-gradient(175deg, #00ba94 0%, rgba(105, 0, 199, 2) 110%);
     --white: #fff;
     
     --green: #00ac69;
@@ -70,20 +70,32 @@ button, a{
     height:30px;
 }
 
+.content header .cadastrar{
+    display: flex;
+    align-items: center;
+}
+
 .content header .cadastrar a{
     margin-top: 10px;
+    margin-left: 30px;
     font-size: 23px;
     color: var(--text);
     font-weight: 600;
     text-decoration: none;
     display: flex;
     align-items: center;
+    transition: all 0.2s;
+}
+.content header .cadastrar a:hover{
+  filter: brightness(90%);
+  color: var(--white);
 }
 .content header .cadastrar a #login{
     display: flex;
-    margin-right: 13px;
+    margin-right: 5px;
     background: url(/assets/log-in.svg) no-repeat;
     width: 25px;
     height: 25px;
 }
+
 

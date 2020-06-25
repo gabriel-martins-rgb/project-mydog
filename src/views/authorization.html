@@ -1,0 +1,51 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    <title>MyDog - profile</title>
+{% endblock title %}
+
+{% block styles %}
+    <link rel="stylesheet" href="/styles/search.css">
+{% endblock styles %}
+
+{% block content %}
+    <div id="modal">
+        <div class="success">
+            <!--1853755024-->
+            {% if msg == false %}
+                <h1>Esse usuário não existe</h1>
+            {% endif %}
+
+            <h3>
+                Bem vindo
+                {{place.name}}, aqui você pode remover suas postagens.</h3>
+            <a href="/">Sair</a>
+            {% if autenticad == true %}
+                <div class="content">
+                    <h2>Suas postagens</h2>
+                    <div class="cards">
+                        {% for place in codigo %}
+
+                            <div class="card">
+                                <div class="image">
+                                    <img src="{{place.image}}" alt="">
+                                </div>
+                                <div class="text">
+                                    <h2>{{place.subject}}</h2>
+
+                                    <h5>{{place.city}}
+                                        ,
+                                        {{place.uf}}</h5>
+                                    <h5>{{place.neighborhood}}</h5>
+                                    <h5>{{place.address}},
+                                        {{place.number}}</h5>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    {% endif %}
+                </div>
+            </div>
+
+        </div>
+    </div>
+{% endblock content %}

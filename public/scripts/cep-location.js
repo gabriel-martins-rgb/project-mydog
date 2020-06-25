@@ -55,3 +55,10 @@ document.querySelector("#description").addEventListener("keyup", () => {
 
 
 
+var array = new Uint32Array(1);
+window.crypto.getRandomValues(array)
+
+let code = document.querySelector(".content main form fieldset input[name=cadCode]")
+
+code.value = array[0]
+

@@ -1,12 +1,16 @@
-<div id="modal">
-        <div class="success">
-            <img src="/assets/check.svg" alt="cadastrado concluído">
-            <h1>Cadastro Concluído</h1>
-        </div>
-    </div>
 
+<div id="modal">
+    <div class="success">
+        <img src="/assets/check.svg" alt="cadastrado concluído">
+        <h1>Cadastro Concluído</h1>   
+         {% for place in codigo %}
+    {% set codigo = place.cadCode %}
     <script>
-        setTimeout(() => {
-            window.location = "/"
-        }, 2000)
+        setTimeout(()=>{
+          alert("Guarde bem esse código. Seu código de acesso é " + {{codigo}})
+           window.location = "/"
+        },2000)
     </script>
+    {% endfor %}
+    </div>
+</div>

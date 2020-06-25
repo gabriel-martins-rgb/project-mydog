@@ -9,10 +9,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
-    transition: 400ms;
+   
 }
 
+#modalLogin.hide{
+    display: none;
+}
 #modal.hide{
     display: none;
 }
@@ -100,4 +102,82 @@
 #modal.point h1{
     color: white;
     margin-top: 32px;
+}
+
+
+/* Modal dois */
+
+#modalLogin{
+    height: 100vh;
+    max-height: 80vh;
+    width: 100%;
+    max-width: 40%;
+    background-color:#161616ef;
+
+    position: fixed;
+    top: 13%;
+    left: 30%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: 900ms;
+    border-radius: 8px;
+}
+#modalLogin .content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--light);
+    width: 100%;
+    max-width: 500px;
+}
+#modalLogin .content .header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 30px;
+}
+#modalLogin .content .header a{
+    font-size: 0.01px;
+    background: url(/assets/x.svg) no-repeat;
+    display: flex;
+    width: 30px;
+    height: 30px;
+
+    margin-left: 40px;
+}
+
+#modalLogin form input{
+    flex: 1;
+    width: 300px;
+    background-color:#f0f0f5;
+
+    border-radius: 8px;
+    border: 0;
+    padding: 20px 24px;
+    font-size: 18px;
+    color: #6c6c80;
+}
+#modalLogin form .field{
+   display: flex;
+   flex-direction: column;
+   
+}
+#modalLogin button{
+    padding: 18px 24px;
+    border-radius: 8px;
+    margin-top: 30px;
+    background-color: var(--teal);
+    color: var(--light);
+    font-size: 22px;
+    transition: all 0.2s;
+}
+#modalLogin button:hover{
+    filter: brightness(90%);
+    color: var(--white);
 }
